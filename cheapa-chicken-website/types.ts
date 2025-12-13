@@ -11,10 +11,10 @@ export interface Product {
 
 export enum SectionId {
   HOME = 'home',
+  WHY_US = 'why-us',
   ABOUT = 'about',
   PRODUCTS = 'products',
   SERVICES = 'services',
-  RECIPES = 'recipes',
   BANK = 'bank',
   CALCULATOR = 'calculator',
   ACCOUNTANT = 'accountant',

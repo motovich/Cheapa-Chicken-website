@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { WhyChooseUs } from './components/WhyChooseUs';
 import { About } from './components/About';
 import { Products } from './components/Products';
-import { RecipeGenerator } from './components/RecipeGenerator';
 import { MobilePickingStation } from './components/MobilePickingStation';
 import { CheapaBank } from './components/CheapaBank';
 import { CheapaAccountant } from './components/CheapaAccountant';
@@ -11,6 +11,7 @@ import { ProfitCalculator } from './components/ProfitCalculator';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { BookPromo } from './components/BookPromo';
+import { Testimonials } from './components/Testimonials';
 import { SectionId } from './types';
 
 function App() {
@@ -44,25 +45,26 @@ function App() {
         {currentView === SectionId.HOME && (
           <>
             <Hero onNavigate={handleNavigate} />
+            <WhyChooseUs onNavigate={handleNavigate} />
             <About isSnippet onNavigate={handleNavigate} />
+            <Testimonials />
             <BookPromo />
             <MobilePickingStation isSnippet onNavigate={handleNavigate} />
             <CheapaBank isSnippet onNavigate={handleNavigate} />
             <CheapaAccountant isSnippet onNavigate={handleNavigate} />
             <ProfitCalculator isSnippet onNavigate={handleNavigate} />
             <Products isSnippet onNavigate={handleNavigate} />
-            <RecipeGenerator isSnippet onNavigate={handleNavigate} />
           </>
         )}
 
         {/* Full Page Views */}
+        {currentView === SectionId.WHY_US && <WhyChooseUs onNavigate={handleNavigate} />}
         {currentView === SectionId.ABOUT && <About />}
         {currentView === SectionId.SERVICES && <MobilePickingStation />}
         {currentView === SectionId.BANK && <CheapaBank />}
         {currentView === SectionId.ACCOUNTANT && <CheapaAccountant />}
         {currentView === SectionId.CALCULATOR && <ProfitCalculator />}
         {currentView === SectionId.PRODUCTS && <Products onNavigate={handleNavigate} />}
-        {currentView === SectionId.RECIPES && <RecipeGenerator />}
         {currentView === SectionId.CONTACT && <Contact />}
       </main>
 

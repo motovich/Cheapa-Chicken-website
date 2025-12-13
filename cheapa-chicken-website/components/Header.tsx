@@ -21,13 +21,12 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate }) => 
 
   const navLinks = [
     { id: SectionId.HOME, label: 'Home' },
-    { id: SectionId.ABOUT, label: 'About Us' },
+    { id: SectionId.WHY_US, label: 'Why Us' },
     { id: SectionId.SERVICES, label: 'Mobile Picking' },
     { id: SectionId.BANK, label: 'Bank' },
     { id: SectionId.ACCOUNTANT, label: 'Accountant' },
     { id: SectionId.CALCULATOR, label: 'Profit Calc' },
     { id: SectionId.PRODUCTS, label: 'Products' },
-    { id: SectionId.RECIPES, label: 'AI Kitchen' },
     { id: SectionId.CONTACT, label: 'Contact' },
   ];
 
